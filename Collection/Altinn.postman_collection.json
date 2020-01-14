@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0064a96f-4aa0-4353-94e9-b7639ae906ec",
+		"_postman_id": "03c4b8dc-d9fe-48fa-80e0-2441be215251",
 		"name": "Altinn",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -150,7 +150,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"FileName\": \"string example 43\",\r\n    \"AttachmentType\": \"string example 43\",\r\n    \"Data\": \"base64 encoded\"\r\n}"
+									"raw": "{\r\n    \"FileName\": \"attachment.pdf\",\r\n    \"AttachmentType\": \"pdf\",\r\n    \"Data\": \"base64 encoded\"\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who/messages/:messageId/attachments/:attachmentId?language=",
@@ -261,7 +261,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"FileName\": \"string example 43\",\r\n    \"AttachmentType\": \"string example 43\",\r\n    \"Data\": \"base64 encoded\"\r\n}"
+									"raw": "{\r\n    \"FileName\": \"attachment.pdf\",\r\n    \"AttachmentType\": \"pdf\",\r\n    \"Data\": \"base64 encoded\"\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who:/messages/:messageId:/attachments?language=",
@@ -384,7 +384,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"UserName\": \"string 76\",\r\n    \"UserPassword\": \"string 76\"\r\n}"
+									"raw": "{\r\n    \"UserName\": \"olanordmann\",\r\n    \"UserPassword\": \"passord123\"\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/authentication/authenticatewithpassword",
@@ -845,7 +845,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"Type\": \"Email\",\r\n    \"SocialSecurityNumber\": \"string example 34\",\r\n    \"LastName\": \"string example 34\",\r\n    \"_embedded\" : {\r\n        \"Roles\" : [{\r\n            \"RoleDefinitionId\": 64;\r\n        }],\r\n        \"Rights\" : [{\r\n            \"ServiceCode\": \"string example 36\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"string example 36\"\r\n        },\r\n        {\r\n            \"MessageID\": 64;\r\n            \"ServiceCode\": \"string example 36\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"string example 36\"\r\n        },\r\n        {\r\n            \"SystemResourceID\": \"string example 36\",\r\n            \"Action\": \"string example 38\"\r\n        }]\r\n    }\r\n}"
+									"raw": "{\r\n    \"Type\": \"Email\",\r\n    \"SocialSecurityNumber\": \"01023456789\",\r\n    \"LastName\": \"Nordmann\",\r\n    \"_embedded\" : {\r\n        \"Roles\" : [{\r\n            \"RoleDefinitionId\": 64;\r\n        }],\r\n        \"Rights\" : [{\r\n            \"ServiceCode\": \"2308\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"read\"\r\n        },\r\n        {\r\n            \"MessageID\": 64;\r\n            \"ServiceCode\": \"2308\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"read\"\r\n        },\r\n        {\r\n            \"SystemResourceID\": \"12345\",\r\n            \"Action\": \"read\"\r\n        }]\r\n    }\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who:/authorization/Delegations",
@@ -1215,7 +1215,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"Type\": \"SubForm\",\r\n    \"DataFormatId\": \"string example 36\",\r\n    \"DataFormatVersion\": \"string example 38\",\r\n    \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n}"
+									"raw": "{\r\n    \"Type\": \"SubForm\",\r\n    \"DataFormatId\": \"1243\",\r\n    \"DataFormatVersion\": \"10656\",\r\n    \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who/messages/:messageId/forms",
@@ -1326,7 +1326,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"Type\": \"SubForm\",\r\n    \"DataFormatId\": \"string example 36\",\r\n    \"DataFormatVersion\": \"string example 38\",\r\n    \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n}"
+									"raw": "{\r\n    \"Type\": \"SubForm\",\r\n    \"DataFormatId\": \"1243\",\r\n    \"DataFormatVersion\": \"10656\",\r\n    \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who/messages/:messageId/forms/:formId",
@@ -1681,7 +1681,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"Type\": \"FormTask\",\r\n    \"ServiceCode\": \"string example 34\",\r\n    \"ServiceEdition\": 64,\r\n    \"_embedded\" : {\r\n        \"forms\" : [{\r\n            \"Type\": \"MainForm\",\r\n            \"DataFormatId\": \"string example 36\",\r\n            \"DataFormatVersion\": \"string example 38\",\r\n            \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n        }],\r\n        \"attachments\" : [{\r\n            \"FileName\": \"string example 43\",\r\n            \"AttachmentType\": \"string example 43\",\r\n            \"Data\": \"base64 encoded\"\r\n        }]\r\n    }\r\n}"
+									"raw": "{\r\n    \"Type\": \"FormTask\",\r\n    \"ServiceCode\": \"2308\",\r\n    \"ServiceEdition\": 64,\r\n    \"_embedded\" : {\r\n        \"forms\" : [{\r\n            \"Type\": \"MainForm\",\r\n            \"DataFormatId\": \"1243\",\r\n            \"DataFormatVersion\": \"10656\",\r\n            \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n        }],\r\n        \"attachments\" : [{\r\n            \"FileName\": \"attachment.pdf\",\r\n            \"AttachmentType\": \"pdf\",\r\n            \"Data\": \"base64 encoded\"\r\n        }]\r\n    }\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who/Messages/:messageId?language=&complete=&sign=",
@@ -1861,7 +1861,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"Type\": \"FormTask\",\r\n    \"ServiceCode\": \"string example 34\",\r\n    \"ServiceEdition\": 64,\r\n    \"_embedded\" : {\r\n        \"forms\" : [{\r\n            \"Type\": \"MainForm\",\r\n            \"DataFormatId\": \"string example 36\",\r\n            \"DataFormatVersion\": \"string example 38\",\r\n            \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n        }],\r\n        \"attachments\" : [{\r\n            \"FileName\": \"string example 43\",\r\n            \"AttachmentType\": \"string example 43\",\r\n            \"Data\": \"base64 encoded\"\r\n        }]\r\n    }\r\n}"
+									"raw": "{\r\n    \"Type\": \"FormTask\",\r\n    \"ServiceCode\": \"2308\",\r\n    \"ServiceEdition\": 64,\r\n    \"_embedded\" : {\r\n        \"forms\" : [{\r\n            \"Type\": \"MainForm\",\r\n            \"DataFormatId\": \"1243\",\r\n            \"DataFormatVersion\": \"10656\",\r\n            \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n        }],\r\n        \"attachments\" : [{\r\n            \"FileName\": \"attachment.pdf\",\r\n            \"AttachmentType\": \"pdf\",\r\n            \"Data\": \"base64 encoded\"\r\n        }]\r\n    }\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who/Messages?language=&complete=&sign=",
@@ -2003,7 +2003,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"Type\": \"FormTask\",\r\n    \"ServiceCode\": \"string example 34\",\r\n    \"ServiceEdition\": 64,\r\n    \"_embedded\" : {\r\n        \"forms\" : [{\r\n            \"Type\": \"MainForm\",\r\n            \"DataFormatId\": \"string example 36\",\r\n            \"DataFormatVersion\": \"string example 38\",\r\n            \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n        }],\r\n        \"attachments\" : [{\r\n            \"FileName\": \"string example 43\",\r\n            \"AttachmentType\": \"string example 43\",\r\n            \"Data\": \"base64 encoded\"\r\n        }]\r\n    }\r\n}"
+									"raw": "{\r\n    \"Type\": \"FormTask\",\r\n    \"ServiceCode\": \"2308\",\r\n    \"ServiceEdition\": 64,\r\n    \"_embedded\" : {\r\n        \"forms\" : [{\r\n            \"Type\": \"MainForm\",\r\n            \"DataFormatId\": \"1243\",\r\n            \"DataFormatVersion\": \"10656\",\r\n            \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n        }],\r\n        \"attachments\" : [{\r\n            \"FileName\": \"attachment.pdf\",\r\n            \"AttachmentType\": \"pdf\",\r\n            \"Data\": \"base64 encoded\"\r\n        }]\r\n    }\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who/Messages/:messageId/Archive?language=",
@@ -2061,7 +2061,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"Type\": \"FormTask\",\r\n    \"ServiceCode\": \"string example 34\",\r\n    \"ServiceEdition\": 64,\r\n    \"_embedded\" : {\r\n        \"forms\" : [{\r\n            \"Type\": \"MainForm\",\r\n            \"DataFormatId\": \"string example 36\",\r\n            \"DataFormatVersion\": \"string example 38\",\r\n            \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n        }],\r\n        \"attachments\" : [{\r\n            \"FileName\": \"string example 43\",\r\n            \"AttachmentType\": \"string example 43\",\r\n            \"Data\": \"base64 encoded\"\r\n        }]\r\n    }\r\n}"
+									"raw": "{\r\n    \"Type\": \"FormTask\",\r\n    \"ServiceCode\": \"2308\",\r\n    \"ServiceEdition\": 64,\r\n    \"_embedded\" : {\r\n        \"forms\" : [{\r\n            \"Type\": \"MainForm\",\r\n            \"DataFormatId\": \"1243\",\r\n            \"DataFormatVersion\": \"10656\",\r\n            \"FormData\": \"<Skjema xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"...>...</Skjema>\"\r\n        }],\r\n        \"attachments\" : [{\r\n            \"FileName\": \"attachment.pdf\",\r\n            \"AttachmentType\": \"pdf\",\r\n            \"Data\": \"base64 encoded\"\r\n        }]\r\n    }\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who/Messages/:messageId/Confirm?language=",
@@ -3403,7 +3403,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{envUrl}}/api/:who/authorization/rights",
+									"raw": "{{envUrl}}/api/:who/authorization/rights?",
 									"host": [
 										"{{envUrl}}"
 									],
@@ -3780,7 +3780,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"RoleName\": \"string example 34\",\r\n    \"RoleDescription\": 64,\r\n    \"RoleType\": \"string example 34\",\r\n    \"_embedded\" : {\r\n        \"Rights\" : [{\r\n            \"ServiceCode\": \"string example 36\",\r\n            \"ServiceEditionCode\": \"string example 38\",\r\n            \"Action\": \"string example 36\"\r\n        }]\r\n    }\r\n}"
+									"raw": "{\r\n    \"RoleName\": \"string example 34\",\r\n    \"RoleDescription\": 64,\r\n    \"RoleType\": \"string example 34\",\r\n    \"_embedded\" : {\r\n        \"Rights\" : [{\r\n            \"ServiceCode\": \"2308\",\r\n            \"ServiceEditionCode\": \"38\",\r\n            \"Action\": \"read\"\r\n        }]\r\n    }\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who/authorization/RoleDefinitions/:roleTypeID?language=",
@@ -3881,7 +3881,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"RoleName\": \"string example 34\",\r\n    \"RoleDescription\": 64,\r\n    \"RoleType\": \"string example 34\",\r\n    \"_embedded\" : {\r\n        \"Rights\" : [{\r\n            \"ServiceCode\": \"string example 36\",\r\n            \"ServiceEditionCode\": \"string example 38\",\r\n            \"Action\": \"string example 36\"\r\n        }]\r\n    }\r\n}"
+									"raw": "{\r\n    \"RoleName\": \"string example 34\",\r\n    \"RoleDescription\": 64,\r\n    \"RoleType\": \"string example 34\",\r\n    \"_embedded\" : {\r\n        \"Rights\" : [{\r\n            \"ServiceCode\": \"2308\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"read\"\r\n        }]\r\n    }\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who/authorization/RoleDefinitions?language=",
@@ -3931,7 +3931,7 @@
 									{
 										"key": "Content-Type",
 										"name": "Content-Type",
-										"value": "application/x-www-form-urlencoded",
+										"value": "application/json",
 										"type": "text"
 									},
 									{
@@ -3942,7 +3942,12 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    ServiceCode: \"string\",\r\n    ServiceEditionCode: integer,\r\n    UsageDateTime: \"datetime, ISO 8601\"\r\n}"
+									"raw": "{\r\n    \"ServiceCode\": \"2308\",\r\n    \"ServiceEditionCode\": 64,\r\n    \"UsageDateTime\": \"datetime, ISO 8601\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/authorization/token/:authCode/loguse?ForceEIAuthentication",
@@ -4896,7 +4901,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "[\r\n    {\r\n        \"ServiceCode\": \"sample string 19\",\r\n        \"ServiceEditionCode\": 2,\r\n        \"Reportee\": \"string sample\",\r\n        \"Right\": \"Write\",\r\n        \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\",\r\n        \"Condition\": {\r\n            \"HandledBy\": \"901234567\",\r\n            \"IsRecipient\": true,\r\n            \"IsSender\": true,\r\n            \"KeepSessionAlive\": true,\r\n            \"AllowedRedirectDomain\": [\r\n              \"*.vg.no\",\r\n              \"www.nrk.no\"\r\n            ]\r\n        }\r\n    },\r\n    {\r\n        \"ServiceCode\": \"sample string 19\",\r\n        \"ServiceEditionCode\": 2,\r\n        \"Reportee\": \"string sample\",\r\n        \"Right\": \"Read\",\r\n        \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\"\r\n    }\r\n]"
+									"raw": "{\r\n        \"ServiceCode\": \"sample string 19\",\r\n        \"ServiceEditionCode\": 2,\r\n        \"Reportee\": \"string sample\",\r\n        \"Right\": \"Write\",\r\n        \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\",\r\n        \"Condition\": {\r\n            \"HandledBy\": \"901234567\",\r\n            \"IsRecipient\": true,\r\n            \"IsSender\": true,\r\n            \"KeepSessionAlive\": true,\r\n            \"AllowedRedirectDomain\": [\r\n              \"*.vg.no\",\r\n              \"www.nrk.no\"\r\n            ]\r\n        }\r\n    },\r\n    {\r\n        \"ServiceCode\": \"sample string 19\",\r\n        \"ServiceEditionCode\": 2,\r\n        \"Reportee\": \"string sample\",\r\n        \"Right\": \"Read\",\r\n        \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\"\r\n    }"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/serviceowner/srr",
