@@ -10,3 +10,8 @@ In the top left corner is an *import* button. Either drag the `Altinn.postman_co
 In the top right corner there is a button with a cog wheel called *manage environments*. Click it, then click the *import* button, then click *choose files*. Select all the json-files in `postman-examples/environments/` and click *open*.
 
 For more information, go to https://altinn.github.io/docs/api/rest/
+
+### Using enterprise certificate authentication
+When using [authentication with enterprise certificates](https://altinn.github.io/docs/api/rest/kom-i-gang/) (link in norwegian only), you must configure a [client certificate in Postman](https://learning.getpostman.com/docs/postman/sending-api-requests/certificates/). For testing in dev environment without TLS-termination, you must supply the certificate in Base64 PEM format (without BEGIN/END headers) in a HTTP header named `X-ENV-SSL_CLIENT_CERTIFICATE` for authorization to take place. 
+
+For all non-dev environments, all requests must include the query parameter `ForceEIAuthentication` in order for TLS client authentication to take place. This is already included in all service owner operations.
