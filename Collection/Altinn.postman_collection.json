@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "76c27ab7-a87e-44f1-9459-8c861af25900",
+		"_postman_id": "43a59dde-0211-488c-bd57-38b7c35b6f94",
 		"name": "Altinn",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -264,15 +264,15 @@
 									"raw": "{\r\n    \"FileName\": \"attachment.pdf\",\r\n    \"AttachmentType\": \"pdf\",\r\n    \"Data\": \"base64 encoded\"\r\n}"
 								},
 								"url": {
-									"raw": "{{envUrl}}/api/:who:/messages/:messageId:/attachments?language=",
+									"raw": "{{envUrl}}/api/:who/messages/:messageId/attachments?language=",
 									"host": [
 										"{{envUrl}}"
 									],
 									"path": [
 										"api",
-										":who:",
+										":who",
 										"messages",
-										":messageId:",
+										":messageId",
 										"attachments"
 									],
 									"query": [
@@ -283,11 +283,11 @@
 									],
 									"variable": [
 										{
-											"key": "who:",
+											"key": "who",
 											"value": ""
 										},
 										{
-											"key": "messageId:",
+											"key": "messageId",
 											"value": ""
 										}
 									]
@@ -848,19 +848,19 @@
 									"raw": "{\r\n    \"Type\": \"Email\",\r\n    \"SocialSecurityNumber\": \"01023456789\",\r\n    \"LastName\": \"Nordmann\",\r\n    \"_embedded\" : {\r\n        \"Roles\" : [{\r\n            \"RoleDefinitionId\": 64;\r\n        }],\r\n        \"Rights\" : [{\r\n            \"ServiceCode\": \"2308\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"read\"\r\n        },\r\n        {\r\n            \"MessageID\": 64;\r\n            \"ServiceCode\": \"2308\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"read\"\r\n        },\r\n        {\r\n            \"SystemResourceID\": \"12345\",\r\n            \"Action\": \"read\"\r\n        }]\r\n    }\r\n}"
 								},
 								"url": {
-									"raw": "{{envUrl}}/api/:who:/authorization/Delegations",
+									"raw": "{{envUrl}}/api/:who/authorization/Delegations",
 									"host": [
 										"{{envUrl}}"
 									],
 									"path": [
 										"api",
-										":who:",
+										":who",
 										"authorization",
 										"Delegations"
 									],
 									"variable": [
 										{
-											"key": "who:",
+											"key": "who",
 											"value": ""
 										}
 									]
@@ -1046,7 +1046,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{envUrl}}/api/:who/authorization/Delegations/:receiverId}:roles/:roleId",
+									"raw": "{{envUrl}}/api/:who/authorization/Delegations/:receiverId/roles/:roleId",
 									"host": [
 										"{{envUrl}}"
 									],
@@ -1055,7 +1055,8 @@
 										":who",
 										"authorization",
 										"Delegations",
-										":receiverId}:roles",
+										":receiverId",
+										"roles",
 										":roleId"
 									],
 									"variable": [
@@ -1064,7 +1065,7 @@
 											"value": ""
 										},
 										{
-											"key": "receiverId}:roles",
+											"key": "receiverId",
 											"value": ""
 										},
 										{
@@ -2445,7 +2446,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{envUrl}}/api/metadata/formtask/:serviceCode:/:serviceEditionCode?language=",
+									"raw": "{{envUrl}}/api/metadata/formtask/:serviceCode/:serviceEditionCode?language=",
 									"host": [
 										"{{envUrl}}"
 									],
@@ -2453,7 +2454,7 @@
 										"api",
 										"metadata",
 										"formtask",
-										":serviceCode:",
+										":serviceCode",
 										":serviceEditionCode"
 									],
 									"query": [
@@ -2464,7 +2465,7 @@
 									],
 									"variable": [
 										{
-											"key": "serviceCode:",
+											"key": "serviceCode",
 											"value": ""
 										},
 										{
@@ -3375,7 +3376,7 @@
 							"response": []
 						},
 						{
-							"name": "reportees/ConvertToReporteeId",
+							"name": "reportees/ReporteeConversion",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -3406,14 +3407,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{envUrl}}/api/reportees/ConvertToReporteeId",
+									"raw": "{{envUrl}}/api/reportees/ReporteeConversion",
 									"host": [
 										"{{envUrl}}"
 									],
 									"path": [
 										"api",
 										"reportees",
-										"ConvertToReporteeId"
+										"ReporteeConversion"
 									]
 								}
 							},
@@ -4946,7 +4947,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n        \"ServiceCode\": \"sample string 19\",\r\n        \"ServiceEditionCode\": 2,\r\n        \"Reportee\": \"string sample\",\r\n        \"Right\": \"Write\",\r\n        \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\",\r\n        \"Condition\": {\r\n            \"HandledBy\": \"901234567\",\r\n            \"IsRecipient\": true,\r\n            \"IsSender\": true,\r\n            \"KeepSessionAlive\": true,\r\n            \"AllowedRedirectDomain\": [\r\n              \"*.vg.no\",\r\n              \"www.nrk.no\"\r\n            ]\r\n        }\r\n    },\r\n    {\r\n        \"ServiceCode\": \"sample string 19\",\r\n        \"ServiceEditionCode\": 2,\r\n        \"Reportee\": \"string sample\",\r\n        \"Right\": \"Read\",\r\n        \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\"\r\n    }"
+									"raw": "{\r\n    \"ServiceCode\": \"sample string 19\",\r\n    \"ServiceEditionCode\": 2,\r\n    \"Reportee\": \"string sample\",\r\n    \"Right\": \"Write\",\r\n    \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\",\r\n    \"Condition\": {\r\n        \"HandledBy\": \"901234567\",\r\n        \"IsRecipient\": true,\r\n        \"IsSender\": true,\r\n        \"KeepSessionAlive\": true,\r\n        \"AllowedRedirectDomain\": [\r\n          \"*.vg.no\",\r\n          \"www.nrk.no\"\r\n        ]\r\n    }\r\n},\r\n{\r\n    \"ServiceCode\": \"sample string 19\",\r\n    \"ServiceEditionCode\": 2,\r\n    \"Reportee\": \"string sample\",\r\n    \"Right\": \"Read\",\r\n    \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\"\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/serviceowner/srr",
