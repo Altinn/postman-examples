@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ec90a9ae-e7c4-4d21-bae5-9af07b305e88",
+		"_postman_id": "e98429eb-283f-4ee0-9683-dd568012850a",
 		"name": "Altinn",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -3372,6 +3372,51 @@
 									]
 								},
 								"description": "Gets a reportee entity by its id."
+							},
+							"response": []
+						},
+						{
+							"name": "reportees/ReporteeConversion",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{ApiKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"SocialSecurityNumber\": \"\",\n\t\"LastName\": \"\",\n\t\"OrganizationNumber\": \"\",\n\t\"OrganizationName\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{envUrl}}/api/reportees/ReporteeConversion",
+									"host": [
+										"{{envUrl}}"
+									],
+									"path": [
+										"api",
+										"reportees",
+										"ReporteeConversion"
+									]
+								}
 							},
 							"response": []
 						}
