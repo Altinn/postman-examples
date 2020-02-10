@@ -5067,6 +5067,72 @@
 					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Consents",
+					"item": [
+						{
+							"name": "{{envUrl}}/api/serviceowner/consents?serviceCode&serviceEditionCode=&status=&continuation=",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{ApiKeyServiceOwner}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{envUrl}}/api/serviceowner/consents?serviceCode&serviceEditionCode=&status=&continuation=",
+									"host": [
+										"{{envUrl}}"
+									],
+									"path": [
+										"api",
+										"serviceowner",
+										"consents"
+									],
+									"query": [
+										{
+											"key": "serviceCode",
+											"value": ""
+										},
+										{
+											"key": "serviceEditionCode",
+											"value": ""
+										},
+										{
+											"key": "status",
+											"value": ""
+										},
+										{
+											"key": "continuation",
+											"value": ""
+										}
+									]
+								},
+								"description": "Get all the consents for a service. The serviceCode and serviceEditionCode specifies which service to retrieve consents for. It is possible to specify the consent status that should be included in the list. By default, both active and revoked status will be included. The continuation parameter will allow user to only include new consents or consents that have changed status since last request."
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
 				}
 			],
 			"event": [
