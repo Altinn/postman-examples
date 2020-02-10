@@ -4947,7 +4947,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"ServiceCode\": \"sample string 19\",\r\n    \"ServiceEditionCode\": 2,\r\n    \"Reportee\": \"string sample\",\r\n    \"Right\": \"Write\",\r\n    \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\",\r\n    \"Condition\": {\r\n        \"HandledBy\": \"901234567\",\r\n        \"IsRecipient\": true,\r\n        \"IsSender\": true,\r\n        \"KeepSessionAlive\": true,\r\n        \"AllowedRedirectDomain\": [\r\n          \"*.vg.no\",\r\n          \"www.nrk.no\"\r\n        ]\r\n    }\r\n},\r\n{\r\n    \"ServiceCode\": \"sample string 19\",\r\n    \"ServiceEditionCode\": 2,\r\n    \"Reportee\": \"string sample\",\r\n    \"Right\": \"Read\",\r\n    \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\"\r\n}"
+									"raw": "[\r\n    {\r\n        \"ServiceCode\": \"sample string 19\",\r\n        \"ServiceEditionCode\": 2,\r\n        \"Reportee\": \"string sample\",\r\n        \"Right\": \"Write\",\r\n        \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\",\r\n        \"Condition\": {\r\n            \"HandledBy\": \"901234567\",\r\n            \"IsRecipient\": true,\r\n            \"IsSender\": true,\r\n            \"KeepSessionAlive\": true,\r\n            \"AllowedRedirectDomain\": [\r\n                \"*.vg.no\",\r\n                \"www.nrk.no\"\r\n            ]\r\n        }\r\n    },\r\n    {\r\n        \"ServiceCode\": \"sample string 19\",\r\n        \"ServiceEditionCode\": 2,\r\n        \"Reportee\": \"string sample\",\r\n        \"Right\": \"Read\",\r\n        \"ValidTo\": \"2019-04-29T07:56:20.0590584+02:00\"\r\n    }\r\n]"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/serviceowner/srr",
