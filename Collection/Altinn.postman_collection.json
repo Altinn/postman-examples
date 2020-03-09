@@ -4251,7 +4251,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{envUrl}}/api/serviceowner/delegationRequests?ForceEIAuthentication",
+									"raw": "{{envUrl}}/api/serviceowner/delegationRequests?ForceEIAuthentication=true",
 									"host": [
 										"{{envUrl}}"
 									],
@@ -4263,7 +4263,7 @@
 									"query": [
 										{
 											"key": "ForceEIAuthentication",
-											"value": null
+											"value": "true"
 										},
 										{
 											"key": "serviceCode",
@@ -4287,7 +4287,7 @@
 										}
 									]
 								},
-								"description": "Get all the consents for a service. The serviceCode and serviceEditionCode specifies which service to retrieve consents for. It is possible to specify the consent status that should be included in the list. By default, both active and revoked status will be included. The continuation parameter will allow user to only include new consents or consents that have changed status since last request."
+								"description": "Get all the created delegation requests service by the serviceOwner. The serviceCode and serviceEditionCode specifies which service to retrieve delegation requests for. The continuation parameter will allow user to only include new delegation requests or delegation requests that have changed status since last request."
 							},
 							"response": []
 						},
@@ -4342,7 +4342,7 @@
 										}
 									]
 								},
-								"description": "Get all the consents for a service. The serviceCode and serviceEditionCode specifies which service to retrieve consents for. It is possible to specify the consent status that should be included in the list. By default, both active and revoked status will be included. The continuation parameter will allow user to only include new consents or consents that have changed status since last request."
+								"description": "Get a spesific delegation request by its GUID"
 							},
 							"response": []
 						},
@@ -4394,7 +4394,7 @@
 										}
 									]
 								},
-								"description": "Get all the consents for a service. The serviceCode and serviceEditionCode specifies which service to retrieve consents for. It is possible to specify the consent status that should be included in the list. By default, both active and revoked status will be included. The continuation parameter will allow user to only include new consents or consents that have changed status since last request."
+								"description": "Posting a new delegation request for services owned by the service owner"
 							},
 							"response": []
 						},
@@ -4449,7 +4449,7 @@
 										}
 									]
 								},
-								"description": "Get all the consents for a service. The serviceCode and serviceEditionCode specifies which service to retrieve consents for. It is possible to specify the consent status that should be included in the list. By default, both active and revoked status will be included. The continuation parameter will allow user to only include new consents or consents that have changed status since last request."
+								"description": "Deleting a delegation request by its GUID"
 							},
 							"response": []
 						}
