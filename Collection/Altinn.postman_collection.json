@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7b7b0430-76be-416d-909c-e81d9a4cc171",
+		"_postman_id": "ca762f47-93e9-4977-874e-98196752fc42",
 		"name": "Altinn",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -464,7 +464,7 @@
 					"name": "ConsentRequest",
 					"item": [
 						{
-							"name": "consentRequest/{authCode}",
+							"name": "consentRequests/{authCode}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -481,6 +481,11 @@
 									{
 										"key": "Accept",
 										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
+										"value": "{{Cert}}",
 										"type": "text"
 									}
 								],
@@ -512,7 +517,7 @@
 							"response": []
 						},
 						{
-							"name": "consentRequest/{authCode}",
+							"name": "consentRequests/{authCode}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -529,6 +534,11 @@
 									{
 										"key": "Accept",
 										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
+										"value": "{{Cert}}",
 										"type": "text"
 									}
 								],
@@ -560,7 +570,7 @@
 							"response": []
 						},
 						{
-							"name": "consentRequest",
+							"name": "consentRequests",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -577,6 +587,11 @@
 									{
 										"key": "Accept",
 										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
+										"value": "{{Cert}}",
 										"type": "text"
 									}
 								],
@@ -601,6 +616,76 @@
 									]
 								},
 								"description": "Adds a new Consent request into the ConsentRequest table"
+							},
+							"response": []
+						},
+						{
+							"name": "consentRequests?serviceCode={serviceCode}&serviceEditionCode={serviceEditionCode}&direction={direction}&status[0]={status[0]}&status[1]={status[1]}&continuation={continuation}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{ApiKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
+										"value": "{{Cert}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{envUrl}}/api/consentRequests?serviceCode=&serviceEditionCode=",
+									"host": [
+										"{{envUrl}}"
+									],
+									"path": [
+										"api",
+										"consentRequests"
+									],
+									"query": [
+										{
+											"key": "serviceCode",
+											"value": ""
+										},
+										{
+											"key": "serviceEditionCode",
+											"value": ""
+										},
+										{
+											"key": "direction",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "status[0]",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "status[1]",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "continuation",
+											"value": "",
+											"disabled": true
+										}
+									]
+								},
+								"description": "Gets all consent requests for authenticated part, optionally filtered by service or pagination"
 							},
 							"response": []
 						}
