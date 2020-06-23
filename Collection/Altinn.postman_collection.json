@@ -597,7 +597,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"CoveredBy\": \"999888777\",\r\n  \"OfferedBy\": \"999888777\",\r\n  \"OfferedByName\": \"bedriftsnavn\" \r\n  \"HandledBy\": \"999888777\",\r\n  \"RequiredDelegator\": \"12018211111\",\r\n  \"RequiredDelegatorName\": \"olsen\"\r\n  \"ValidTo\": \"2019-06-25T13:17:31.495Z\",\r\n  \"RedirectUrl\": \"https://example.com/example\",\r\n  \"RequestResouces\": [\r\n    {\r\n      \"ServiceCode\": \"x1234\",\r\n      \"ServiceEditionCode\": 1112,\r\n      \"Metadata\": {\r\n        \"inntektsaar\": 2019\r\n      }\r\n    }\r\n  ],\r\n  \"RequestMessage\": {\r\n    \"no-nb\": \"string\",\r\n    \"no-nn\": \"string\",\r\n    \"en\": \"string\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"CoveredBy\": \"999888777\",\r\n  \"OfferedBy\": \"999888777\",\r\n  \"OfferedByName\": \"bedriftsnavn\" \r\n  \"HandledBy\": \"999888777\",\r\n  \"RequiredDelegator\": \"12018211111\",\r\n  \"RequiredDelegatorName\": \"olsen\"\r\n  \"ValidTo\": \"2019-06-25T13:17:31.495Z\",\r\n  \"RedirectUrl\": \"https://example.com/example\",\r\n  \"RequestResources\": [\r\n    {\r\n      \"ServiceCode\": \"x1234\",\r\n      \"ServiceEditionCode\": 1112,\r\n      \"Metadata\": {\r\n        \"inntektsaar\": 2019\r\n      }\r\n    }\r\n  ],\r\n  \"RequestMessage\": {\r\n    \"no-nb\": \"string\",\r\n    \"no-nn\": \"string\",\r\n    \"en\": \"string\"\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/consentRequest?ForceEIAuthentication",
