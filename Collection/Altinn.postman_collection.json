@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ca762f47-93e9-4977-874e-98196752fc42",
+		"_postman_id": "7c1ffda1-c699-418d-ab88-6c92e5e0c162",
 		"name": "Altinn",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -597,7 +597,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"CoveredBy\": \"999888777\",\r\n  \"OfferedBy\": \"999888777\",\r\n  \"OfferedByName\": \"bedriftsnavn\" \r\n  \"HandledBy\": \"999888777\",\r\n  \"RequiredDelegator\": \"12018211111\",\r\n  \"RequiredDelegatorName\": \"olsen\"\r\n  \"ValidTo\": \"2019-06-25T13:17:31.495Z\",\r\n  \"RedirectUrl\": \"https://example.com/example\",\r\n  \"RequestResouces\": [\r\n    {\r\n      \"ServiceCode\": \"x1234\",\r\n      \"ServiceEditionCode\": 1112,\r\n      \"Metadata\": {\r\n        \"inntektsaar\": 2019\r\n      }\r\n    }\r\n  ],\r\n  \"RequestMessage\": {\r\n    \"no-nb\": \"string\",\r\n    \"no-nn\": \"string\",\r\n    \"en\": \"string\"\r\n  }\r\n}"
+									"raw": "{\r\n  \"CoveredBy\": \"999888777\",\r\n  \"OfferedBy\": \"999888777\",\r\n  \"OfferedByName\": \"bedriftsnavn\",\r\n  \"HandledBy\": \"999888777\",\r\n  \"RequiredDelegator\": \"12018211111\",\r\n  \"RequiredDelegatorName\": \"olsen\",\r\n  \"ValidTo\": \"2019-06-25T13:17:31.495Z\",\r\n  \"RedirectUrl\": \"https://example.com/example\",\r\n  \"RequestResources\": [\r\n    {\r\n      \"ServiceCode\": \"x1234\",\r\n      \"ServiceEditionCode\": 1112,\r\n      \"Metadata\": {\r\n        \"inntektsaar\": 2019\r\n      }\r\n    }\r\n  ],\r\n  \"RequestMessage\": {\r\n    \"no-nb\": \"string\",\r\n    \"no-nn\": \"string\",\r\n    \"en\": \"string\"\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/consentRequest?ForceEIAuthentication",
@@ -930,7 +930,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"Type\": \"Email\",\r\n    \"SocialSecurityNumber\": \"01023456789\",\r\n    \"LastName\": \"Nordmann\",\r\n    \"_embedded\" : {\r\n        \"Roles\" : [{\r\n            \"RoleDefinitionId\": 64;\r\n        }],\r\n        \"Rights\" : [{\r\n            \"ServiceCode\": \"2308\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"read\"\r\n        },\r\n        {\r\n            \"MessageID\": 64;\r\n            \"ServiceCode\": \"2308\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"read\"\r\n        },\r\n        {\r\n            \"SystemResourceID\": \"12345\",\r\n            \"Action\": \"read\"\r\n        }]\r\n    }\r\n}"
+									"raw": "{\r\n    \"Type\": \"Email\",\r\n    \"SocialSecurityNumber\": \"01023456789\",\r\n    \"LastName\": \"Nordmann\",\r\n    \"_embedded\" : {\r\n        \"Roles\" : [{\r\n            \"RoleDefinitionId\": 64\r\n        }],\r\n        \"Rights\" : [{\r\n            \"ServiceCode\": \"2308\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"read\"\r\n        },\r\n        {\r\n            \"MessageID\": 64,\r\n            \"ServiceCode\": \"2308\",\r\n            \"ServiceEditionCode\": 64,\r\n            \"Action\": \"read\"\r\n        },\r\n        {\r\n            \"SystemResourceID\": \"12345\",\r\n            \"Action\": \"read\"\r\n        }]\r\n    }\r\n}"
 								},
 								"url": {
 									"raw": "{{envUrl}}/api/:who/authorization/Delegations",
@@ -4216,7 +4216,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "81710a79-a544-40f6-bda8-ad35840ac000",
+						"id": "6333b1b3-cf01-4d99-8718-25338063bdc6",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4226,7 +4226,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "13dd780c-6338-48d4-8e86-e77c12932da9",
+						"id": "555282ed-017a-47a7-b0fd-db5a89ebba83",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4607,7 +4607,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "30fa8434-5e7f-4598-9ecb-627c2c3372c8",
+								"id": "0fe0090b-bf69-4e6d-b918-fb505e75e7c5",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4617,7 +4617,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e718b3e7-8bf4-4081-a916-622e134df6b1",
+								"id": "be40e383-29ae-415a-a995-79d185161796",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5282,7 +5282,8 @@
 									{
 										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
 										"type": "text",
-										"value": ""
+										"value": "",
+										"disabled": true
 									}
 								],
 								"url": {
@@ -5455,13 +5456,94 @@
 					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Notifications",
+					"item": [
+						{
+							"name": "serviceowner/notifications/validaterecipient",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{ApiKeyServiceOwner}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{envUrl}}/api/serviceowner/notifications/validaterecipient?ForceEIAuthentication&organizationNumber=&socialSecurityNumber=&lastName=&serviceCode=&serviceEditionCode=",
+									"host": [
+										"{{envUrl}}"
+									],
+									"path": [
+										"api",
+										"serviceowner",
+										"notifications",
+										"validaterecipient"
+									],
+									"query": [
+										{
+											"key": "ForceEIAuthentication",
+											"value": null,
+											"description": "Needed to force certificate exchange for autentication (Excluded if using Bearer token autentication)"
+										},
+										{
+											"key": "organizationNumber",
+											"value": "",
+											"description": "The organization to be checked (Excluded if validating for a user)"
+										},
+										{
+											"key": "socialSecurityNumber",
+											"value": "",
+											"description": "The social security number of the user to be checked, must be paired with a last name (Excluded if validating for an organization)"
+										},
+										{
+											"key": "lastName",
+											"value": "",
+											"description": "The last name of user, must be given when socialSecurityNumber is filled and correspond to socialSecurityNumber (Excluded if validating for an organization)"
+										},
+										{
+											"key": "serviceCode",
+											"value": "",
+											"description": "Optional: ServiceCode if validating notification for a specific service"
+										},
+										{
+											"key": "serviceEditionCode",
+											"value": "",
+											"description": "Optional: ServiceEditionCode if validating notification for a specific service"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
 				}
 			],
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "ac78396a-ff20-4b51-9dc2-0bd4953bc0a5",
+						"id": "e9e01f32-85f6-4736-aada-e0826306daec",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5471,7 +5553,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4bffd58c-f2a5-489d-9252-c0093404f055",
+						"id": "fa6e9aac-1d5c-4103-83d9-35db04cb9a31",
 						"type": "text/javascript",
 						"exec": [
 							""
