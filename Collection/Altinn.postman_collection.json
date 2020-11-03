@@ -387,7 +387,7 @@
 									"raw": "{\r\n    \"UserName\": \"olanordmann\",\r\n    \"UserPassword\": \"passord123\"\r\n}"
 								},
 								"url": {
-									"raw": "{{envUrl}}/api/authentication/authenticatewithpassword",
+									"raw": "{{envUrl}}/api/authentication/authenticatewithpassword?ForceEIAuthentication",
 									"host": [
 										"{{envUrl}}"
 									],
@@ -395,6 +395,13 @@
 										"api",
 										"authentication",
 										"authenticatewithpassword"
+									],
+									"query": [
+										{
+											"key": "ForceEIAuthentication",
+											"value": null,
+											"description": "Needed to force certificate exchange for autentication with an enterprice certificate user (Can be excluded if authenticating with username/password for a private user)"
+										}
 									]
 								},
 								"description": "Attempts to authenticate the user with the provided social security number or username, and password. The password and username can be configured on the portal profile page. This method also supports authentication using client certificates. To enable client certificate authentication, include the URL-parameter ?ForceEIAuthentication."
