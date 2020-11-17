@@ -657,7 +657,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{envUrl}}/api/consentRequests?serviceCode=&serviceEditionCode=",
+									"raw": "{{envUrl}}/api/consentRequests?serviceEditionCode=&ForceEIAuthentication&serviceCode=",
 									"host": [
 										"{{envUrl}}"
 									],
@@ -666,10 +666,6 @@
 										"consentRequests"
 									],
 									"query": [
-										{
-											"key": "serviceCode",
-											"value": ""
-										},
 										{
 											"key": "serviceEditionCode",
 											"value": ""
@@ -693,6 +689,14 @@
 											"key": "continuation",
 											"value": "",
 											"disabled": true
+										},
+										{
+											"key": "ForceEIAuthentication",
+											"value": null
+										},
+										{
+											"key": "serviceCode",
+											"value": ""
 										}
 									]
 								},
@@ -894,7 +898,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{envUrl}}/api/consentRequests?serviceCode=&serviceEditionCode=",
+									"raw": "{{envUrl}}/api/consentRequests?serviceCode=&ForceEIAuthentication&serviceEditionCode=",
 									"host": [
 										"{{envUrl}}"
 									],
@@ -903,14 +907,6 @@
 										"consentRequests"
 									],
 									"query": [
-										{
-											"key": "serviceCode",
-											"value": ""
-										},
-										{
-											"key": "serviceEditionCode",
-											"value": ""
-										},
 										{
 											"key": "direction",
 											"value": "",
@@ -930,6 +926,18 @@
 											"key": "continuation",
 											"value": "",
 											"disabled": true
+										},
+										{
+											"key": "serviceCode",
+											"value": ""
+										},
+										{
+											"key": "ForceEIAuthentication",
+											"value": null
+										},
+										{
+											"key": "serviceEditionCode",
+											"value": ""
 										}
 									]
 								},
