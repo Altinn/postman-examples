@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7c1ffda1-c699-418d-ab88-6c92e5e0c162",
+		"_postman_id": "81faf822-e5ed-4e9a-bfdf-863f985ab28e",
 		"name": "Altinn",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -468,7 +468,7 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "ConsentRequest",
+					"name": "ConsentRequests",
 					"item": [
 						{
 							"name": "consentRequests/{authCode}",
@@ -493,17 +493,18 @@
 									{
 										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
 										"value": "{{Cert}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									}
 								],
 								"url": {
-									"raw": "{{envUrl}}/api/consentRequest/:authCode?ForceEIAuthentication",
+									"raw": "{{envUrl}}/api/consentRequests/:authCode?ForceEIAuthentication",
 									"host": [
 										"{{envUrl}}"
 									],
 									"path": [
 										"api",
-										"consentRequest",
+										"consentRequests",
 										":authCode"
 									],
 									"query": [
@@ -546,17 +547,18 @@
 									{
 										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
 										"value": "{{Cert}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									}
 								],
 								"url": {
-									"raw": "{{envUrl}}/api/consentRequest/:authCode?ForceEIAuthentication",
+									"raw": "{{envUrl}}/api/consentRequests/:authCode?ForceEIAuthentication",
 									"host": [
 										"{{envUrl}}"
 									],
 									"path": [
 										"api",
-										"consentRequest",
+										"consentRequests",
 										":authCode"
 									],
 									"query": [
@@ -599,7 +601,8 @@
 									{
 										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
 										"value": "{{Cert}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									}
 								],
 								"body": {
@@ -607,13 +610,13 @@
 									"raw": "{\r\n  \"CoveredBy\": \"999888777\",\r\n  \"OfferedBy\": \"999888777\",\r\n  \"OfferedByName\": \"bedriftsnavn\",\r\n  \"HandledBy\": \"999888777\",\r\n  \"RequiredDelegator\": \"12018211111\",\r\n  \"RequiredDelegatorName\": \"olsen\",\r\n  \"ValidTo\": \"2019-06-25T13:17:31.495Z\",\r\n  \"RedirectUrl\": \"https://example.com/example\",\r\n  \"RequestResources\": [\r\n    {\r\n      \"ServiceCode\": \"x1234\",\r\n      \"ServiceEditionCode\": 1112,\r\n      \"Metadata\": {\r\n        \"inntektsaar\": 2019\r\n      }\r\n    }\r\n  ],\r\n  \"RequestMessage\": {\r\n    \"no-nb\": \"string\",\r\n    \"no-nn\": \"string\",\r\n    \"en\": \"string\"\r\n  }\r\n}"
 								},
 								"url": {
-									"raw": "{{envUrl}}/api/consentRequest?ForceEIAuthentication",
+									"raw": "{{envUrl}}/api/consentRequests?ForceEIAuthentication",
 									"host": [
 										"{{envUrl}}"
 									],
 									"path": [
 										"api",
-										"consentRequest"
+										"consentRequests"
 									],
 									"query": [
 										{
@@ -649,7 +652,8 @@
 									{
 										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
 										"value": "{{Cert}}",
-										"type": "text"
+										"type": "text",
+										"disabled": true
 									}
 								],
 								"url": {
@@ -695,6 +699,265 @@
 								"description": "Gets all consent requests for authenticated part, optionally filtered by service or pagination"
 							},
 							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "DelegationRequests",
+					"item": [
+						{
+							"name": "delegationRequests/{authCode}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "ApiKey",
+										"type": "text",
+										"value": "{{ApiKey}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/hal+json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/hal+json"
+									},
+									{
+										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
+										"type": "text",
+										"value": "{{Cert}}",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{envUrl}}/api/delegationRequests/:authCode?ForceEIAuthentication",
+									"host": [
+										"{{envUrl}}"
+									],
+									"path": [
+										"api",
+										"delegationRequests",
+										":authCode"
+									],
+									"query": [
+										{
+											"key": "ForceEIAuthentication",
+											"value": null
+										}
+									],
+									"variable": [
+										{
+											"key": "authCode",
+											"value": ""
+										}
+									]
+								},
+								"description": "Get a specific Consent request from the AuthorizationRequest table"
+							},
+							"response": []
+						},
+						{
+							"name": "delegationRequests/{authCode}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{ApiKey}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									},
+									{
+										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
+										"value": "{{Cert}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{envUrl}}/api/delegationRequests/:authCode?ForceEIAuthentication",
+									"host": [
+										"{{envUrl}}"
+									],
+									"path": [
+										"api",
+										"delegationRequests",
+										":authCode"
+									],
+									"query": [
+										{
+											"key": "ForceEIAuthentication",
+											"value": null
+										}
+									],
+									"variable": [
+										{
+											"key": "authCode",
+											"value": ""
+										}
+									]
+								},
+								"description": "Delete a specific consent request from the AuthorizationRequest table"
+							},
+							"response": []
+						},
+						{
+							"name": "delegationRequests",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "ApiKey",
+										"type": "text",
+										"value": "{{ApiKey}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/hal+json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/hal+json"
+									},
+									{
+										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
+										"type": "text",
+										"value": "{{Cert}}",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CoveredBy\": \"777888999\",\r\n  \"OfferedBy\": \"999888777\",\r\n  \"RequestResources\": [\r\n    {\r\n      \"ServiceCode\": \"x1234\",\r\n      \"ServiceEditionCode\": 1112\r\n    }\r\n  ],\r\n  \"RequestMessage\": \"Need this right in order to complete the daily task on the service\"\r\n}"
+								},
+								"url": {
+									"raw": "{{envUrl}}/api/delegationRequests?ForceEIAuthentication",
+									"host": [
+										"{{envUrl}}"
+									],
+									"path": [
+										"api",
+										"delegationRequests"
+									],
+									"query": [
+										{
+											"key": "ForceEIAuthentication",
+											"value": null
+										}
+									]
+								},
+								"description": "Adds a new Consent request into the ConsentRequest table"
+							},
+							"response": []
+						},
+						{
+							"name": "delegationRequests?serviceCode={serviceCode}&serviceEditionCode={serviceEditionCode}&direction={direction}&status[0]={status[0]}&status[1]={status[1]}&continuation={continuation}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "ApiKey",
+										"type": "text",
+										"value": "{{ApiKey}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/hal+json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/hal+json"
+									},
+									{
+										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
+										"type": "text",
+										"value": "{{Cert}}",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{envUrl}}/api/consentRequests?serviceCode=&serviceEditionCode=",
+									"host": [
+										"{{envUrl}}"
+									],
+									"path": [
+										"api",
+										"consentRequests"
+									],
+									"query": [
+										{
+											"key": "serviceCode",
+											"value": ""
+										},
+										{
+											"key": "serviceEditionCode",
+											"value": ""
+										},
+										{
+											"key": "direction",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "status[0]",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "status[1]",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "continuation",
+											"value": "",
+											"disabled": true
+										}
+									]
+								},
+								"description": "Gets all consent requests for authenticated part, optionally filtered by service or pagination"
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "e31cd9c6-2b09-42b5-ab03-902ab342cb38",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "8357774b-f00d-47e4-a829-d8d6ea975724",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
 						}
 					],
 					"protocolProfileBehavior": {},
@@ -4223,7 +4486,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "6333b1b3-cf01-4d99-8718-25338063bdc6",
+						"id": "952e2941-1ed4-485c-9ce2-1e825fffec02",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4233,7 +4496,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "555282ed-017a-47a7-b0fd-db5a89ebba83",
+						"id": "6ecc34fb-564f-4c76-99cf-ac9a96b94d64",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -4316,7 +4579,7 @@
 					"name": "DelegationRequests",
 					"item": [
 						{
-							"name": "{{envUrl}}/api/serviceowner/delegationRequests?serviceCode&serviceEditionCode=&status=&continuation=",
+							"name": "serviceowner/delegationRequests?serviceCode&serviceEditionCode=&status=&continuation=",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -4384,7 +4647,7 @@
 							"response": []
 						},
 						{
-							"name": "{{envUrl}}/api/serviceowner/delegationRequests/{id}",
+							"name": "serviceowner/delegationRequests/{id}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -4439,7 +4702,7 @@
 							"response": []
 						},
 						{
-							"name": "{{envUrl}}/api/serviceowner/delegationRequests/{id}",
+							"name": "serviceowner/delegationRequests/{id}",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -4491,7 +4754,7 @@
 							"response": []
 						},
 						{
-							"name": "{{envUrl}}/api/serviceowner/delegationRequests/{id}",
+							"name": "serviceowner/delegationRequests/{id}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -4614,7 +4877,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "0fe0090b-bf69-4e6d-b918-fb505e75e7c5",
+								"id": "50328338-d68a-4dd2-8563-3bf6b3d03f53",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4624,7 +4887,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "be40e383-29ae-415a-a995-79d185161796",
+								"id": "a1e22134-6b45-4f08-b9c9-241bc96cc223",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5489,7 +5752,7 @@
 									},
 									{
 										"key": "X-ENV-SSL_CLIENT_CERTIFICATE",
-										"value": "",
+										"value": "{{Cert}}",
 										"type": "text",
 										"disabled": true
 									}
@@ -5550,7 +5813,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e9e01f32-85f6-4736-aada-e0826306daec",
+						"id": "2766945f-23bf-43b0-83a2-b30ac1ba2b49",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -5560,7 +5823,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fa6e9aac-1d5c-4103-83d9-35db04cb9a31",
+						"id": "35aa2a82-d10c-4900-a693-543773e23fa2",
 						"type": "text/javascript",
 						"exec": [
 							""
