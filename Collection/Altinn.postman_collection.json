@@ -625,7 +625,7 @@
 										}
 									]
 								},
-								"description": "Adds a new Consent request into the ConsentRequest table"
+								"description": "Adds a new Consent request into the AuthorizationRequest table"
 							},
 							"response": []
 						},
@@ -761,7 +761,7 @@
 										}
 									]
 								},
-								"description": "Get a specific Consent request from the AuthorizationRequest table"
+								"description": "Get a specific delegation request from the AuthorizationRequest table"
 							},
 							"response": []
 						},
@@ -815,7 +815,7 @@
 										}
 									]
 								},
-								"description": "Delete a specific consent request from the AuthorizationRequest table"
+								"description": "Delete a specific delegation request from the AuthorizationRequest table"
 							},
 							"response": []
 						},
@@ -866,7 +866,7 @@
 										}
 									]
 								},
-								"description": "Adds a new Consent request into the ConsentRequest table"
+								"description": "Adds a new delegation request into the AuthorizationRequest table"
 							},
 							"response": []
 						},
@@ -941,7 +941,7 @@
 										}
 									]
 								},
-								"description": "Gets all consent requests for authenticated part, optionally filtered by service or pagination"
+								"description": "Gets all delegation requests for authenticated part, optionally filtered by service or pagination"
 							},
 							"response": []
 						}
