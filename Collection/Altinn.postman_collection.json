@@ -354,9 +354,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Authentication",
@@ -408,9 +406,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "BrokerService",
@@ -463,9 +459,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "ConsentRequests",
@@ -704,9 +698,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "DelegationRequests",
@@ -1495,9 +1487,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Forms",
@@ -1897,9 +1887,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "LookUp",
@@ -1962,9 +1950,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Messages",
@@ -2685,9 +2671,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Metadata",
@@ -3159,10 +3143,93 @@
 								"description": "Retrieve a specific code list in the given language if available."
 							},
 							"response": []
+						},
+						{
+							"name": "/metadata/rolerequirements?serviceCode=&serviceEditionCode=&language=1044",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{envUrl}}/api/metadata/rolerequirements?serviceCode=&serviceEditionCode=&language=1044",
+									"host": [
+										"{{envUrl}}"
+									],
+									"path": [
+										"api",
+										"metadata",
+										"rolerequirements"
+									],
+									"query": [
+										{
+											"key": "serviceCode",
+											"value": "",
+											"description": "The service code for an AltinnII service or 'AppId:{AppId}' if a maskinporten delegationscheme or AltinnIII app. Can be found using /api/metadata."
+										},
+										{
+											"key": "serviceEditionCode",
+											"value": "",
+											"description": "The service edition code for an AltinnII service or left blank if using an 'AppId:{AppId}' service code."
+										},
+										{
+											"key": "language",
+											"value": "1044",
+											"description": "1044: bokmål, 1033: english, 2068: nynorsk"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/metadata/rolerequirements?app=&language=1044",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{envUrl}}/api/metadata/rolerequirements?app=org/appname&language=1044",
+									"host": [
+										"{{envUrl}}"
+									],
+									"path": [
+										"api",
+										"metadata",
+										"rolerequirements"
+									],
+									"query": [
+										{
+											"key": "app",
+											"value": "org/appname",
+											"description": "The App identifier from AltinnIII in the format: org/appname"
+										},
+										{
+											"key": "language",
+											"value": "1044",
+											"description": "1044: bokmål, 1033: english, 2068: nynorsk"
+										}
+									]
+								}
+							},
+							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Organizations",
@@ -3254,9 +3321,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Profile",
@@ -3521,9 +3586,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Reportee",
@@ -3783,9 +3846,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Rights",
@@ -3963,9 +4024,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Roles",
@@ -4061,9 +4120,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "RoleDefinitions",
@@ -4320,9 +4377,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Token",
@@ -4485,9 +4540,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				}
 			],
 			"event": [
@@ -4511,8 +4564,7 @@
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "service owner",
@@ -4579,9 +4631,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "DelegationRequests",
@@ -4816,9 +4866,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Events",
@@ -4902,9 +4950,7 @@
 								]
 							}
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Organizations",
@@ -5175,9 +5221,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Reportees",
@@ -5245,9 +5289,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Rights",
@@ -5304,9 +5346,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Roles",
@@ -5367,9 +5407,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "RoleDefinitions",
@@ -5475,9 +5513,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "SrrRight",
@@ -5731,9 +5767,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Notifications",
@@ -5812,9 +5846,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				}
 			],
 			"event": [
@@ -5838,9 +5870,7 @@
 						]
 					}
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
