@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "6d9a572d-7fd5-447c-9cd8-4db6fe1985ce",
+		"name": "Maskinporten VER2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Last ned jsrsasign-js til environment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set('jsrsasign-js', responseBody);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://kjur.github.io/jsrsasign/jsrsasign-latest-all-min.js",
+					"protocol": "http",
+					"host": [
+						"kjur",
+						"github",
+						"io"
+					],
+					"path": [
+						"jsrsasign",
+						"jsrsasign-latest-all-min.js"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Maskinporten Token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Script based on Google Service Account Access from Postman Team Collection\r",
+							"// https://www.postman.com/postman/workspace/postman-team-collections/request/8140651-60e7082b-cd42-4e65-a739-1ab8d48990c3\r",
+							"var navigator = {};\r",
+							"var window = {};\r",
+							"eval(pm.environment.get(\"jsrsasign-js\"));\r",
+							"var uuid = require('uuid');\r",
+							"\r",
+							"var environment = pm.environment.get('envUrl');\r",
+							"var scope = pm.environment.get('maskinporten-scope');\r",
+							"var issuer = pm.environment.get('maskinporten-client_id');\r",
+							"\r",
+							"var jwk = JSON.parse(pm.environment.get('maskinporten-jwk'));\r",
+							"var privateKey = KEYUTIL.getKey(jwk);\r",
+							"var keyIdentifier = jwk.kid;\r",
+							"\r",
+							"const header = \r",
+							"{\r",
+							"    \"alg\": \"RS256\",\r",
+							"    \"kid\": keyIdentifier\r",
+							"}\r",
+							"\r",
+							"const claimSet =\r",
+							"{\r",
+							"    \"aud\": \"https://ver2.maskinporten.no/\",\r",
+							"    \"resource\": environment,\r",
+							"    \"scope\": scope,\r",
+							"    \"iss\": issuer,\r",
+							"    \"exp\": (KJUR.jws.IntDate.get(\"now\") + 120),\r",
+							"    \"iat\": KJUR.jws.IntDate.get(\"now\"),\r",
+							"    \"jti\": uuid.v4()\r",
+							"}\r",
+							"\r",
+							"//console.log(`header: ${ JSON.stringify(header)}`);\r",
+							"//console.log(`claim set: ${ JSON.stringify(claimSet) }`);\r",
+							"\r",
+							"var jwt = KJUR.jws.JWS.sign(null, header, claimSet, privateKey);\r",
+							"//console.log(`JWT: ${ jwt }`);\r",
+							"\r",
+							"pm.environment.set('jwt', jwt);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var tokenResponse = pm.response.json();\r",
+							"pm.environment.set('maskinporten-access_token', tokenResponse.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+							"type": "default"
+						},
+						{
+							"key": "assertion",
+							"value": "{{jwt}}",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ver2.maskinporten.no/token",
+					"protocol": "https",
+					"host": [
+						"ver2",
+						"maskinporten",
+						"no"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
