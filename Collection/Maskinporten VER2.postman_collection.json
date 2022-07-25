@@ -82,7 +82,7 @@
 							"var jwt = KJUR.jws.JWS.sign(null, header, claimSet, privateKey);\r",
 							"//console.log(`JWT: ${ jwt }`);\r",
 							"\r",
-							"pm.environment.set('jwt', jwt);"
+							"pm.environment.set('maskinporten-jwt', jwt);"
 						],
 						"type": "text/javascript"
 					}
@@ -118,7 +118,7 @@
 						},
 						{
 							"key": "assertion",
-							"value": "{{jwt}}",
+							"value": "{{maskinporten-jwt}}",
 							"type": "default"
 						}
 					],
